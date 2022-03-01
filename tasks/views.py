@@ -151,7 +151,7 @@ class GenericTaskUpdateView(AuthorizedTaskManager, UpdateView):
 
 class GenericTaskCreateView(LoginRequiredMixin, CreateView):
     form_class = TaskCreateForm
-    template_name = "task_create.html"
+    template_name = "add_task.html"
     success_url = "/all-tasks"
 
     def form_valid(self, form):
