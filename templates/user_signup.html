@@ -14,7 +14,7 @@
 				</li>
 			</ul>
 			{{ form.username }}
-			<div class="text-xs text-purple-600 mb-2">{{ form.username.errors }}</div>
+			<div class="text-xs text-red-600 mb-2">{{ form.username.errors }}</div>
 		</div>
 		<div class="fieldWrapper">
 			<label for="{{ form.password.id_for_label }}">Password:</label>
@@ -28,7 +28,7 @@
 				<li>Your password can't be entirely numeric.</li>
 			</ul>
 			{{ form.password1 }}
-			<div class="text-xs text-purple-600 py-1 mb-2">{{ form.password.errors }}</div>
+			<div class="text-xs text-red-600 py-1 mb-2">{{ form.password.errors }}</div>
 		</div>
 		<div class="fieldWrapper">
 			<label for="{{ form.confirm_password.id_for_label }}"
@@ -38,16 +38,16 @@
 				<li>Enter the same password as before, for verification.</li>
 			</ul>
 			{{ form.password2 }}
-			<div class="text-xs text-purple-600 py-1 mb-2">{{ form.confirm_password.errors }}</div>
+			<div class="text-xs text-red-600 py-1 mb-2">{{ form.confirm_password.errors }}</div>
 		</div>
-		<div class="text-xs text-purple-600 py-1 mb-2">{{ form.non_field_errors }}</div>
+		<div class="text-xs text-red-600 py-1 mb-2">{{ form.non_field_errors }}</div>
 		{% csrf_token %}
 		<button
-			class="bg-purple-500 hover:bg-purple-700 text-white font-medium py-2 px-4 rounded-md font-base text-center mt-2 w-full"
+			class="bg-red-500 hover:bg-red-700 text-white font-medium py-2 px-4 rounded-md font-base text-center mt-2 w-full"
 		>
 			Signup
 		</button>
-		<i class="mt-2 text-base text-center text-gray-600 py-1">Already Registered? <a class="text-purple-600" href="/user/login/">Login</a></i>
+		<i class="mt-2 text-base text-center text-gray-600 py-1">Already Registered? <a class="text-red-600" href="/user/login/">Login</a></i>
 	</div>
 </form>
 {% endblock content %}

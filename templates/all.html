@@ -3,7 +3,7 @@
 <ul class="flex flex-wrap justify-start items-center">
 	<li class="mr-2">
 		<a href="/all-tasks/"
-			class="inline-block py-2 px-4 text-base font-semibold text-center text-purple-600 bg-purple-100 rounded-full active"
+			class="inline-block py-2 px-4 text-base font-semibold text-center text-red-600 bg-red-100 rounded-full active"
 			aria-current="page">All</a>
 	</li>
 	<li class="mr-2">
@@ -21,7 +21,7 @@
 	<li class="bg-gray-200 flex flex-row mb-2 shadow border justify-around rounded-md p-4">
 		<div class="flex flex-col">
 			{% if task.status == "COMPLETED" %}
-			<div class="font-medium text-purple-600 line-through text-base">
+			<div class="font-medium text-red-600 line-through text-base">
 				<a href="/details-task/{{ task.id }}">{{task.title}}</a>
 			</div>
 			{% else %}
@@ -46,13 +46,13 @@
 				pending
 			</p>
 			{% else %}
-			<p class="px-2 text-xs leading-5 font-semibold rounded-full bg-purple-100 text-purple-800">
+			<p class="px-2 text-xs leading-5 font-semibold rounded-full bg-red-100 text-red-800">
 				cancelled
 			</p>
 			{% endif %}
 			&nbsp;&nbsp;
 			<a href="/delete-task/{{ task.id }}"
-				class="p-2 bg-purple-500 rounded-lg text-center text-white text-sm mr-2"><i class="fas fa-trash"></i></a>
+				class="p-2 bg-red-500 rounded-lg text-center text-white text-sm mr-2"><i class="fas fa-trash"></i></a>
 			{% comment %} <a href="/complete_task/{{ task.id }}"
 				class="p-2 bg-green-500 rounded-lg text-center text-white text-sm mr-2"><i class="fas fa-check"></i></a>
 			{% endcomment %}
