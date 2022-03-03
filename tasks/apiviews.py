@@ -51,7 +51,7 @@ class TaskHistorySerializer(ModelSerializer):
 class TaskFilter(FilterSet):
     title = CharFilter(lookup_expr="icontains")
     status = ChoiceFilter(choices=STATUS_CHOICES)
-    completed = BooleanFilter()
+    completed = BooleanFilter(True)
 
 
 class TaskHistoryFilter(FilterSet):
